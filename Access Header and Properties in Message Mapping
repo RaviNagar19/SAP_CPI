@@ -1,0 +1,15 @@
+Prerequisite: In Content Modifier define Header / Property needs to be used in mapping.
+
+import com.sap.it.api.mapping.MappingContext
+
+//to access properties defined in The content modifier
+def String getProperty(String propertyName, MappingContext context) {
+    def propertyValue = context.getProperty(propertyName);
+    return propertyValue;
+}
+
+//to access header defined in the content modifier
+def String getHeader(String headerName, MappingContext context) {
+    def headerValue = context.getHeader(headerName);
+    return headerValue;
+}
